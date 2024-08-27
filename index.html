@@ -123,6 +123,7 @@
 
     #about {
         padding: 50px 20px;
+        margin-top: 15px;
     }
 
     .about-container {
@@ -172,6 +173,8 @@
         z-index: 0;
         overflow: hidden;
         border: 1px solid #f2f8f9;
+        transition: all;
+        transition-duration: 1s;
     }
 
     .details-container:hover {
@@ -180,6 +183,7 @@
         top: -4px;
         border: 1px solid #cccccc;
         background-color: white;
+
     }
 
     .details-container:before {
@@ -236,6 +240,17 @@
     .contact-info-container img {
         width: 50px;
         height: 50px;
+    }
+
+    .arrow {
+        background: #ff7373;
+        transition: all;
+        transition-duration: 1s;
+    }
+
+    .arrow:hover {
+        scale: 0.8;
+        background-color: rgba(38, 38, 38, 0.2);
     }
 
     footer {
@@ -430,8 +445,8 @@
             </div>
         </div>
     </section>
-    <a href="#"><img src="arrow.png"
-            style="height: 40px; position: fixed; right: 20px; bottom: 51px; background-color: #ff7373; border-radius: 50px;"></a>
+    <a href="#"><img class="arrow" src="arrow.png"
+            style="height: 40px; position: fixed; right: 20px; bottom: 51px;  border-radius: 50px;"></a>
     <footer class="footer_area">
         <div class="container">
             <img src="logo.png" alt="Loading logo..."><br>
