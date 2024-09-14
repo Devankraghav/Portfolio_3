@@ -24,6 +24,7 @@
     body {
         font-family: "Poppins", sans-serif;
     }
+    
 
     .logo img {
         border-radius: 10px;
@@ -96,6 +97,39 @@
         font-size: larger;
         text-align: center;
     }
+    .container{
+    width: 380px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.container .text{
+    position: relative;
+    color: #ff7373;
+    font-size: xx-large;
+    font-weight: 600;
+}
+.container .text.first-text{
+    color: black;
+}
+.text.sec-text:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border-left: 5px solid black;
+    animation: animate 4s steps(1000) infinite;
+}
+@keyframes animate{
+    40%, 60%{
+        left: calc(100% + 4px);
+    }
+    100%{
+        left: 0%;
+    }
+}
 
     h1.title {
         font-size: xx-large;
@@ -302,10 +336,29 @@
         <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
             <div
                 class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Hello, My name is <span
-                        class="purple">Devank Raghav</span>
-                    <br class="hidden lg:inline-block">and I am a Web Developer.
-                </h1>
+                <div class="container">
+                    <span class="text first-text">Hello, I Am</span><br>
+                    <span class="text sec-text">Freelancer</span>
+                </div>
+            
+                <script>
+                    const text = document.querySelector(".sec-text");
+            
+                    const textLoad = () => {
+                        setTimeout(() => {
+                            text.textContent = "Devank Raghav";
+                        }, 0);
+                        setTimeout(() => {
+                            text.textContent = "Frontend Developer";
+                        }, 4000);
+                        setTimeout(() => {
+                            text.textContent = "Coding Enthusiast";
+                        }, 8000); //1s = 1000 milliseconds
+                    }
+            
+                    textLoad();
+                    setInterval(textLoad, 12000);
+                </script>
                 <!-- <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p> -->
                 <div class="flex justify-center">
                     <a href="mailto:devankthakur065@gmail.com"><button
