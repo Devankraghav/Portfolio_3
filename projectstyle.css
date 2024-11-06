@@ -1,0 +1,73 @@
+*{
+  /* box-sizing: border-box; */
+  font-family: "Poppins", sans-serif;
+  
+}
+.main{
+  text-align: center;
+background-color: black;
+}
+#main{
+  font-size: x-large;
+  transition: all 0.3s ease-in-out;
+}
+#main>a:hover{
+  box-shadow: none;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+}
+#main>a{
+  padding: 7px;
+  text-decoration: none;
+  color: #ff7373;
+  transition: all 0.3s ease-in-out;
+}
+#projects{
+display: flex;
+flex-wrap: wrap;
+
+}
+.projectbox{
+  margin: 12px;
+border: 2px solid black;
+width: 400px;
+/* height: 400px; */
+text-align: center;
+transition: all 0.3s ease-in-out;
+transition: height 0.3s ease-in-out;
+}
+
+img{
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 380px;
+}
+.projectbox:hover{
+scale: 0.99;
+box-shadow: 1px 1px 1px #7e7e7e;
+}
+button{
+  background: none;
+ margin: 10px;
+  border: none;
+  
+
+}
+.boxbtn{
+  display: none;
+}
+.projectbox:hover .boxbtn{
+  display: inline-block;
+}
+.boxbtn> a{
+  padding: 7px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease-in-out;
+}
+.boxbtn>a:hover{
+  background-color: black;
+  color: white;
+
+}
