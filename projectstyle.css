@@ -31,7 +31,7 @@ flex-wrap: wrap;
 .projectbox{
   margin: 12px;
 border: 2px solid black;
-width: 400px;
+width: 320px;
 /* height: 400px; */
 text-align: center;
 transition: all 0.3s ease-in-out;
@@ -41,7 +41,7 @@ transition: height 0.3s ease-in-out;
 img{
   border-radius: 5px;
   margin-top: 10px;
-  width: 380px;
+  width: 300px;
 }
 .projectbox:hover{
 scale: 0.99;
