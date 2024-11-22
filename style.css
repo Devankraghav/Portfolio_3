@@ -5,8 +5,13 @@
   box-sizing: border-box;
 }
 
+header {
+  cursor: url("redcursor.png"), auto;
+}
+
 body {
   font-family: "Poppins", sans-serif;
+  cursor: url("whitecursor.png"), auto;
 }
 
 .logo img {
@@ -68,6 +73,12 @@ body {
 .mr-5:hover {
   cursor: pointer;
   text-decoration: overline;
+}
+
+#home {
+  color: white;
+  text-decoration: overline;
+  text-decoration-color: #ea0909;
 }
 
 span.purple {
@@ -224,8 +235,6 @@ img.icon {
   transform: scale(2.15);
 }
 
-#mystack {
-}
 .stack {
   display: flex;
   flex-wrap: wrap;
@@ -251,10 +260,21 @@ img.icon {
 .stack_box {
   text-align: center;
   margin: 15px;
+  transition: all 0.5s ease-in;
+}
+
+.stack_box > p {
+  margin: 5px 0px;
+}
+
+.stack_box:hover {
+  color: white;
+  background-color: #6c757d;
+  border-radius: 3px;
 }
 
 .stack_box img {
-  margin-top: 45px;
+  margin-top: 20px;
   height: 85px;
   aspect-ratio: 3/2;
   object-fit: contain;
@@ -315,6 +335,7 @@ footer {
   color: #7e7e7e;
   background: black;
   justify-content: center;
+  cursor: url("redcursor.png"), auto;
 }
 
 footer img {
