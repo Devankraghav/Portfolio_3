@@ -280,12 +280,46 @@ img.icon {
   object-fit: contain;
 }
 
+.certi, .lor{
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.certi>h1, .lor>h1{
+  font-size: xx-large;
+  font-weight: bold;
+}
+.certi>p, .lor>p{
+  font-size: larger;
+}
+
+.certi-div, .lor-div{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+.certi-box, .lor-box{
+  cursor: none;
+  color: #ff7373;
+  background-color: black;
+  margin: 12px;
+padding: 5px 8px;
+}
+
 #contact {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   height: 300px;
+}
+
+@media (max-width: 720px) {
+  #contact{
+    margin-bottom: 3rem;
+  }
 }
 
 .contact-info-upper-container {
@@ -343,12 +377,11 @@ footer img {
   margin: auto;
   width: 80px;
   transition: all;
-  transition-duration: 3s;
+  transition-duration: 2s;
 }
 
 footer img:hover {
   border: 1px solid #7e7e7e;
-  border-radius: 4px;
-  scale: 2;
+  scale: 1.5;
   cursor: pointer;
 }
