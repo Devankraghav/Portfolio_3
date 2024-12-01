@@ -15,8 +15,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
     <link rel="stylesheet" href="error_404.html">
-    <script src="MyJs.js"></script>
 </head>
 
 <body>
@@ -32,8 +32,9 @@
                 <a class="mr-5 hover:text-white" href="project.html">Projects</a>
                 <a class="mr-5 hover:text-white" href="#contact">Contact Me</a>
             </nav>
-            <a href="#quotes"> <button
-                    class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Quotes
+            <a id="hi"> <button
+                    class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Let's
+                    Celebrate
                     <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                         stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
                         <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -49,26 +50,6 @@
                     <span class="text first-text">Hello, I Am</span><br>
                     <span class="text sec-text">Freelancer</span>
                 </div>
-
-                <script>
-                    const text = document.querySelector(".sec-text");
-
-                    const textLoad = () => {
-                        setTimeout(() => {
-                            text.textContent = "Devank Raghav";
-                        }, 0);
-                        setTimeout(() => {
-                            text.textContent = "Frontend Developer";
-                        }, 4000);
-                        setTimeout(() => {
-                            text.textContent = "Coding Enthusiast";
-                        }, 8000); //1s = 1000 milliseconds
-                    }
-
-                    textLoad();
-                    setInterval(textLoad, 12000);
-                </script>
-                <!-- <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p> -->
                 <div class="flex justify-center">
                     <a href="mailto:devankthakur065@gmail.com"><button
                             class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Hire
@@ -195,7 +176,7 @@
             <div class="certi-box">
                 <h3>30DaysCoding</h3>
             </div>
-    </div>
+        </div>
     </section>
 
     <section class="lor">
@@ -208,7 +189,7 @@
             <div class="lor-box">
                 <h3>Unified Mentor</h3>
             </div>
-    </div>
+        </div>
     </section>
 
     <section id="contact" style="margin-top: 50px; padding-top: 65px;">
@@ -232,7 +213,7 @@
             </div>
         </div>
     </section>
-    
+
     <a href="#"><img id="arrow" class="arrow" src="arrow.png"
             style="height: 40px; position: fixed; right: 20px; bottom: 51px;  border-radius: 50px;"></a>
     <footer class="footer_area">
@@ -244,6 +225,89 @@
         </div>
         </div>
     </footer>
+
+    <script>
+        alert("Hello there! Thanks for dropping by. I hope you find a little magic in our corners.")
+        window.onscroll = function () {
+            if (pageYOffset >= 1) {
+                document.getElementById('arrow').style.visibility = "visible"
+            } else {
+                document.getElementById('arrow').style.visibility = "hidden";
+            }
+        };
+
+        const text = document.querySelector(".sec-text");
+
+        const textLoad = () => {
+            setTimeout(() => {
+                text.textContent = "Devank Raghav";
+            }, 0);
+            setTimeout(() => {
+                text.textContent = "Frontend Developer";
+            }, 4000);
+            setTimeout(() => {
+                text.textContent = "Coding Enthusiast";
+            }, 8000); //1s = 1000 milliseconds
+        }
+
+        textLoad();
+        setInterval(textLoad, 12000);
+
+        const hiibtn = document.getElementById('hi');
+        hiibtn.addEventListener('click', function () {
+            const duration = 4 * 1000,
+                animationEnd = Date.now() + duration;
+
+            let skew = 1;
+
+            function randomInRange(min, max) {
+                return Math.random() * (max - min) + min;
+            }
+
+            (function frame() {
+                const timeLeft = animationEnd - Date.now(),
+                    ticks = Math.max(200, 500 * (timeLeft / duration));
+
+                skew = Math.max(0.8, skew - 0.001);
+
+                confetti({
+                    particleCount: 1,
+                    startVelocity: 0,
+                    ticks: ticks,
+                    origin: {
+                        x: Math.random(),
+                        // since particles fall down, skew start toward the top
+                        y: Math.random() * skew - 0.2,
+                    },
+                    colors: ["#ff7373"],
+                    shapes: ["square"],
+                    gravity: randomInRange(0.4, 0.6),
+                    scalar: randomInRange(0.4, 1),
+                    drift: randomInRange(-0.4, 0.4),
+                });
+
+                confetti({
+                    particleCount: 1,
+                    startVelocity: 0,
+                    ticks: ticks,
+                    origin: {
+                        x: Math.random(),
+                        // since particles fall down, skew start toward the top
+                        y: Math.random() * skew - 0.2,
+                    },
+                    colors: ["#ffffff"],
+                    shapes: ["circle"],
+                    gravity: randomInRange(0.4, 0.6),
+                    scalar: randomInRange(0.4, 1),
+                    drift: randomInRange(-0.4, 0.4),
+                });
+
+                if (timeLeft > 0) {
+                    requestAnimationFrame(frame);
+                }
+            })();
+        })
+    </script>
 
 </body>
 
