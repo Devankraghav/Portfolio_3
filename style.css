@@ -185,6 +185,29 @@ img.icon {
   display: inline;
 }
 
+.main {
+  text-align: center;
+  background-color: black;
+  margin: 12px;
+  display: inline-flex;
+}
+#main {
+  font-size: medium;
+  transition: all 0.3s ease-in-out;
+}
+#main > a:hover {
+  box-shadow: none;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+}
+#main > a {
+  padding: 7px;
+  text-decoration: none;
+  color: #ff7373;
+  transition: all 0.3s ease-in-out;
+}
+
 .details-container {
   padding: 9px;
   flex: 1;
@@ -280,32 +303,36 @@ img.icon {
   object-fit: contain;
 }
 
-.certi, .lor{
+.certi,
+.lor {
   text-align: center;
   margin-top: 5rem;
 }
 
-.certi>h1, .lor>h1{
+.certi > h1,
+.lor > h1 {
   font-size: xx-large;
   font-weight: bold;
 }
-.certi>p, .lor>p{
+.certi > p,
+.lor > p {
   font-size: larger;
 }
 
-.certi-div, .lor-div{
+.certi-div,
+.lor-div {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-
 }
 
-.certi-box, .lor-box{
+.certi-box,
+.lor-box {
   cursor: none;
   color: #ff7373;
   background-color: black;
   margin: 12px;
-padding: 5px 8px;
+  padding: 5px 8px;
 }
 
 #contact {
@@ -317,7 +344,7 @@ padding: 5px 8px;
 }
 
 @media (max-width: 720px) {
-  #contact{
+  #contact {
     margin-bottom: 3rem;
   }
 }
